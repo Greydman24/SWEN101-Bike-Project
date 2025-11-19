@@ -9,25 +9,32 @@
 
 <body>
     <div class="parent">
-        <form class="center">
+        <form class="center" method="POST" action="Reservation.html">
             <img id="sso-logo" src="assets/RIT-banner.png" alt="RIT Authentication">
-            <h4>RIT Login</h4>
-            <p>RIT Bikes</p>
-            <input type="text" id="username" name="username" placeholder="Username" data-=""><br>
+            <p class="label"><br><strong>RIT Login</strong><br>RIT Bikes</p>
+            
+            <input type="text" id="username" name="username" placeholder="RIT Username, ex: xyz1234" data-=""><br>
             <input type="password" id="password" name="password" placeholder="Password"><br>
             <a href="Reservation.html">
-                <input type="submit" value="Log in"><br>
+                <input type="submit" value="Log In"><br>
             </a>
             <input type="checkbox" id="stayLoggedIn" name="stayLoggedIn" value="True">
             <label for="stayLoggedIn"> Stay logged in</label>
+            
+            <p class="help">Need help?</p>
         </form>
     </div>
 </body>
 
 <!-- CSS down here... I think?-->
 <style>
-.parent {
+
+body {
     background-color: #D0D3D4;
+}
+
+.parent {
+    background-color: transparent;
     display: grid;
     height: 100vh;
     width: 100vw;
@@ -38,37 +45,60 @@
     border-radius: 3px;
     border-width: 6px 0px 0px 0px;
     border-color: #F76902 white white white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: white;
     text-align: left;
-    font-size: 20px;
+    font-size: 16px;
     
     padding: 20px 20px;
-    max-width: 55vw;
+    min-width: 370px;
+    min-height: 370px;
 }
 #sso-logo {
-    height: 40px;
+    height: 32px;
 }
 
-h4, p {
+.label {
     text-align: center;
-    margin: 3px;
+    margin-top: 3px;
+    margin-bottom: 20px;
 }
 
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 6px;
-  margin: 5px 0;
+  padding: 12px;
+  font-size: large;
+  margin: 3px 0;
   box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    margin-top: 22px;
+}
+
+input[type=checkbox]:checked {
+    background-color: #7B6AB1;
 }
 
 input[type=submit] {
     background-color: #F76902;
     color: white;
+    font-weight: 600;
+    font-size: 20px;
     border: none;
     width: 100%;
-    padding: 12px 32px;
-    margin-top: 20px;
+    padding: 14px 32px;
+    margin-top: 12px;
     cursor: pointer;
+}
+
+.help {
+    color: #F76902;
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 4px;
 }
 
 </style>
